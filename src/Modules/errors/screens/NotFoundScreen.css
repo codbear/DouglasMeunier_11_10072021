@@ -1,0 +1,18 @@
+.NotFoundScreen_root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.NotFoundScreen_errorCode {
+  font-size: 288px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.NotFoundScreen_errorMessage {
+  font-size: 36px;
+  font-weight: 500;
+  margin: 0 0 182px 0;
+}
