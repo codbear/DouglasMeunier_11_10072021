@@ -10,12 +10,3 @@
 * {
   color: var(--color-text-default);
 }
-
-#root {
-  max-width: 1440px;
-  margin: auto;
-}
-
-a {
-  text-decoration: none;
-}
