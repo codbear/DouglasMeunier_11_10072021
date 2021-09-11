@@ -1,15 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const propTypes = {};
+import { Layout } from '../../layout';
 
-const defaultProps = {};
-
-const AboutScreen = ({}) => {
-  return <h1>A propos</h1>;
-};
-
-AboutScreen.propTypes = propTypes;
-AboutScreen.defaultProps = defaultProps;
+class AboutScreen extends React.Component {
+  render() {
+    return (
+      <Layout>
+        <h1>A propos</h1>
+      </Layout>
+    );
+  }
+}
 
 export default AboutScreen;

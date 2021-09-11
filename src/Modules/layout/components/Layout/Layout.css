@@ -1,0 +1,11 @@
+.root {
+    max-width: 1440px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.content {
+    flex-grow: 2;
+    padding: 0 100px;
+}

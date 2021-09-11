@@ -1,15 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const propTypes = {};
+import { Layout } from '../../layout';
 
-const defaultProps = {};
-
-const LodgingScreen = ({}) => {
-  return <h1>Logement</h1>;
-};
-
-LodgingScreen.propTypes = propTypes;
-LodgingScreen.defaultProps = defaultProps;
+class LodgingScreen extends React.Component {
+  render() {
+    return (
+      <Layout>
+        <h1>Logement</h1>
+      </Layout>
+    );
+  }
+}
 
 export default LodgingScreen;
