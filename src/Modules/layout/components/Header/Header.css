@@ -15,6 +15,10 @@
   margin-left: 57px;
 }
 
+.navItem a {
+  text-decoration: none;
+}
+
 .navItem--active {
   text-decoration: underline;
 }
