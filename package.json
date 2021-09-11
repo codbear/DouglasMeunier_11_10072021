@@ -40,6 +40,10 @@
       "last 1 safari version"
     ]
   },
+  "prettier": {
+    "printWidth": 100,
+    "singleQuote": true
+  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
