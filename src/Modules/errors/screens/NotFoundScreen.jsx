@@ -1,15 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const propTypes = {};
+import { Layout } from '../../layout';
 
-const defaultProps = {};
-
-const NotFoundScreen = ({}) => {
-  return <h1>Erreur 404</h1>;
-};
-
-NotFoundScreen.propTypes = propTypes;
-NotFoundScreen.defaultProps = defaultProps;
+class NotFoundScreen extends React.Component {
+  render() {
+    return (
+      <Layout>
+        <h1>Erreur 404</h1>
+      </Layout>
+    );
+  }
+}
 
 export default NotFoundScreen;

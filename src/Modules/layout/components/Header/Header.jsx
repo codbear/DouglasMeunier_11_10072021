@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
 
 import { ROUTES } from '../../../router';
@@ -6,9 +7,9 @@ import Logo from '../../images/logoKasa.svg';
 import './Header.css';
 
 class Header extends React.Component {
-  constructor(props) {
-    super(props);
-  }
+  static propTypes = {
+    location: PropTypes.object.isRequired,
+  };
 
   getNavItemClassName(route) {
     const {

@@ -4,10 +4,6 @@ import Logo from '../../images/logoKasaWhite.svg';
 import './Footer.css';
 
 class Footer extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-
   render() {
     return (
       <footer className="footer">

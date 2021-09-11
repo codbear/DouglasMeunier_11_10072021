@@ -1,15 +1,15 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
-const propTypes = {};
+import { Layout } from '../../layout';
 
-const defaultProps = {};
-
-const HomeScreen = ({}) => {
-  return <h1>Accueil</h1>;
-};
-
-HomeScreen.propTypes = propTypes;
-HomeScreen.defaultProps = defaultProps;
+class HomeScreen extends React.Component {
+  render() {
+    return (
+      <Layout>
+        <h1>Accueil</h1>
+      </Layout>
+    );
+  }
+}
 
 export default HomeScreen;
