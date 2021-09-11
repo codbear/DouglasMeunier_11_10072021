@@ -1,23 +1,24 @@
 {
   "files": {
-    "main.css": "/DouglasMeunier_11_10072021/static/css/main.a617e044.chunk.css",
-    "main.js": "/DouglasMeunier_11_10072021/static/js/main.229073ce.chunk.js",
-    "main.js.map": "/DouglasMeunier_11_10072021/static/js/main.229073ce.chunk.js.map",
-    "runtime-main.js": "/DouglasMeunier_11_10072021/static/js/runtime-main.632ab519.js",
-    "runtime-main.js.map": "/DouglasMeunier_11_10072021/static/js/runtime-main.632ab519.js.map",
-    "static/js/2.e516471a.chunk.js": "/DouglasMeunier_11_10072021/static/js/2.e516471a.chunk.js",
-    "static/js/2.e516471a.chunk.js.map": "/DouglasMeunier_11_10072021/static/js/2.e516471a.chunk.js.map",
-    "static/js/3.e53a2e52.chunk.js": "/DouglasMeunier_11_10072021/static/js/3.e53a2e52.chunk.js",
-    "static/js/3.e53a2e52.chunk.js.map": "/DouglasMeunier_11_10072021/static/js/3.e53a2e52.chunk.js.map",
+    "main.css": "/DouglasMeunier_11_10072021/static/css/main.d4ec11cd.chunk.css",
+    "main.js": "/DouglasMeunier_11_10072021/static/js/main.5661f182.chunk.js",
+    "main.js.map": "/DouglasMeunier_11_10072021/static/js/main.5661f182.chunk.js.map",
+    "runtime-main.js": "/DouglasMeunier_11_10072021/static/js/runtime-main.e624471e.js",
+    "runtime-main.js.map": "/DouglasMeunier_11_10072021/static/js/runtime-main.e624471e.js.map",
+    "static/js/2.262f23fd.chunk.js": "/DouglasMeunier_11_10072021/static/js/2.262f23fd.chunk.js",
+    "static/js/2.262f23fd.chunk.js.map": "/DouglasMeunier_11_10072021/static/js/2.262f23fd.chunk.js.map",
+    "static/js/3.a44b2754.chunk.js": "/DouglasMeunier_11_10072021/static/js/3.a44b2754.chunk.js",
+    "static/js/3.a44b2754.chunk.js.map": "/DouglasMeunier_11_10072021/static/js/3.a44b2754.chunk.js.map",
     "index.html": "/DouglasMeunier_11_10072021/index.html",
-    "static/css/main.a617e044.chunk.css.map": "/DouglasMeunier_11_10072021/static/css/main.a617e044.chunk.css.map",
-    "static/js/2.e516471a.chunk.js.LICENSE.txt": "/DouglasMeunier_11_10072021/static/js/2.e516471a.chunk.js.LICENSE.txt",
-    "static/media/logo.6ce24c58.svg": "/DouglasMeunier_11_10072021/static/media/logo.6ce24c58.svg"
+    "static/css/main.d4ec11cd.chunk.css.map": "/DouglasMeunier_11_10072021/static/css/main.d4ec11cd.chunk.css.map",
+    "static/js/2.262f23fd.chunk.js.LICENSE.txt": "/DouglasMeunier_11_10072021/static/js/2.262f23fd.chunk.js.LICENSE.txt",
+    "static/media/logoKasa.a6101328.svg": "/DouglasMeunier_11_10072021/static/media/logoKasa.a6101328.svg",
+    "static/media/logoKasaWhite.ee689fd9.svg": "/DouglasMeunier_11_10072021/static/media/logoKasaWhite.ee689fd9.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.632ab519.js",
-    "static/js/2.e516471a.chunk.js",
-    "static/css/main.a617e044.chunk.css",
-    "static/js/main.229073ce.chunk.js"
+    "static/js/runtime-main.e624471e.js",
+    "static/js/2.262f23fd.chunk.js",
+    "static/css/main.d4ec11cd.chunk.css",
+    "static/js/main.5661f182.chunk.js"
   ]
 }
