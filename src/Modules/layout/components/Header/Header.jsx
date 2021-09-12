@@ -11,14 +11,14 @@ class Header extends React.Component {
     location: PropTypes.object.isRequired,
   };
 
-  getNavItemClassName(route) {
+  getIsActive(route) {
     const {
       location: { pathname },
     } = this.props;
 
     const isActive = pathname === route;
 
-    return isActive ? 'Header_navItem--active' : 'Header_navItem';
+    return isActive ? 'active' : '';
   }
 
   render() {
@@ -27,10 +27,10 @@ class Header extends React.Component {
         <img src={Logo} alt="" className="Header_logo" />
         <nav>
           <ul className="Header_mainNav">
-            <li className={this.getNavItemClassName(ROUTES.INDEX)}>
+            <li className={'Header_navItem ' + this.getIsActive(ROUTES.INDEX)}>
               <Link to={ROUTES.INDEX}>Accueil</Link>
             </li>
-            <li className={this.getNavItemClassName(ROUTES.ABOUT)}>
+            <li className={'Header_navItem ' + this.getIsActive(ROUTES.ABOUT)}>
               <Link to={ROUTES.ABOUT}>A propos</Link>
             </li>
           </ul>

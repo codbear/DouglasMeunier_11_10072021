@@ -1,12 +1,5 @@
-:root {
-  --color-primary: #ff6060;
-  --color-text-default: #ff6060;
-  --color-text-contrasted: #ffffff;
-  --color-background-default: #ffffff;
-  --color-background-alternative: #f6f6f6;
-  --color-background-dark: #000000;
-}
+@import 'Modules/theme/palette';
 
 * {
-  color: var(--color-text-default);
+  color: $_color_text_default;
 }

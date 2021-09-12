@@ -1,8 +1,22 @@
+@import '../../../theme/breakpoints';
+
 .Header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 20px;
+
+  @media (break-up(md)) {
   padding: 40px 100px;
+  }
+
+  &_logo {
+    width: 145px;
+
+    @media (break-up(md)) {
+      width: 210px;
+    }
+  }
 
   &_mainNav {
     list-style: none;
@@ -10,15 +24,18 @@
   }
 
   &_navItem {
-    margin-left: 57px;
+    margin-left: 10px;
+
+    @media (break-up(md)) {
+      margin-left: 57px;
+    }
 
     a {
       text-decoration: none;
     }
   }
 
-  &--active {
-    margin-left: 57px;
+  .active {
     text-decoration: underline;
   }
 }

@@ -1,0 +1,19 @@
+@function width($breakpoint) {
+  $widths: (
+xs: 375px,
+sm: 600px,
+md: 960px,
+lg: 1280px,
+xl: 1920px,
+);
+
+  @return map-get($widths, $breakpoint);
+}
+
+@function break-up($breakpoint) {
+  @return 'min-width: #{width($breakpoint)}'
+}
+
+@function break-down($breakpoint) {
+  @return 'max-width: #{width($breakpoint)}'
+}

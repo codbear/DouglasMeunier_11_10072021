@@ -1,3 +1,5 @@
+@import "../../../theme/breakpoints";
+
 .Layout {
   max-width: 1440px;
   min-height: 100vh;
@@ -7,6 +9,10 @@
 
   &_children {
     flex-grow: 2;
-    padding: 0 100px;
+    padding: 0 20px;
+
+    @media (break-up(md)) {
+      padding: 0 100px;
+    }
   }
 }

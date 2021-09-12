@@ -1,14 +1,16 @@
+@import "../../../theme/palette";
+
 .Footer {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  background-color: var(--color-background-dark);
+  background-color: $_color_background_dark;
   padding: 66px 0 29px 0;
   height: 209px;
   box-sizing: border-box;
 
   &_text {
-    color: var(--color-text-contrasted);
+    color: $_color_text_contrasted;
   }
 }

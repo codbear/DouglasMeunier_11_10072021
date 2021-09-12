@@ -1,0 +1,13 @@
+// Base colors
+$_baseColor_kasa: #ff6060;
+$_baseColor_white: #ffffff;
+$_baseColor_smoke: #f6f6f6;
+$_baseColor_black: #000000;
+
+// Semantic colors
+$_color_primary: $_baseColor_kasa;
+$_color_text_default: $_baseColor_kasa;
+$_color_text_contrasted: $_baseColor_white;
+$_color_background_default: $_baseColor_white;
+$_color_background_alternative: $_baseColor_smoke;
+$_color_background_dark: $_baseColor_black;
