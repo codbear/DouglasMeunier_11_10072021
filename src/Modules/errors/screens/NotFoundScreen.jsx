@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 import { ROUTES } from '../../router';
 import { Layout } from '../../layout';
-import './NotFoundScreen.css';
+import './NotFoundScreen.scss';
 
 class NotFoundScreen extends React.Component {
   render() {

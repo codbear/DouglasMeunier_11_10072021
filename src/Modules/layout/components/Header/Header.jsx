@@ -4,7 +4,7 @@ import { Link, withRouter } from 'react-router-dom';
 
 import { ROUTES } from '../../../router';
 import Logo from '../../images/logoKasa.svg';
-import './Header.css';
+import './Header.scss';
 
 class Header extends React.Component {
   static propTypes = {
@@ -18,15 +18,15 @@ class Header extends React.Component {
 
     const isActive = pathname === route;
 
-    return isActive ? 'navItem--active' : 'navItem';
+    return isActive ? 'Header_navItem--active' : 'Header_navItem';
   }
 
   render() {
     return (
-      <header className="header">
-        <img src={Logo} alt="" />
+      <header className="Header">
+        <img src={Logo} alt="" className="Header_logo" />
         <nav>
-          <ul className="mainNav">
+          <ul className="Header_mainNav">
             <li className={this.getNavItemClassName(ROUTES.INDEX)}>
               <Link to={ROUTES.INDEX}>Accueil</Link>
             </li>
