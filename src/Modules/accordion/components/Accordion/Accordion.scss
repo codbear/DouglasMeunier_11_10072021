@@ -2,7 +2,7 @@
 @import '../../../theme/breakpoints';
 
 .Accordion {
-  margin-bottom: 33px;
+  max-width: 1023px;
 
   &_summary {
     background-color: $_color_background_primary;
