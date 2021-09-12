@@ -9,7 +9,7 @@ class NotFoundScreen extends React.Component {
   render() {
     return (
       <Layout>
-        <div className="NotFoundScreen_root">
+        <div className="NotFoundScreen">
           <p className="NotFoundScreen_errorCode">404</p>
           <p className="NotFoundScreen_errorMessage">
             Oups! La page que vous demandez n'existe pas.
