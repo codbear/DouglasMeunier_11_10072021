@@ -1,0 +1,19 @@
+@import '../../theme/palette';
+
+.About {
+  &_hero {
+    border-radius: 25px;
+    margin-bottom: 31px;
+  }
+
+  &_accordionsWrapper {
+    display: flex;
+    flex-direction: column;
+
+    .Accordion {
+      margin: auto {
+        bottom: 33px;
+      }
+    }
+  }
+}
