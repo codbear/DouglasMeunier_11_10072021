@@ -1,0 +1,30 @@
+@import '../../theme/breakpoints';
+
+.NotFoundScreen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &_errorCode {
+    font-size: 96px;
+    font-weight: bold;
+    margin: 0;
+
+    @media (break-up(md)) {
+      font-size: 288px;
+    }
+  }
+
+  &_errorMessage {
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0 0 133px 0;
+
+    @media (break-up(md)) {
+      font-size: 36px;
+      margin-bottom: 182px;
+    }
+  }
+}

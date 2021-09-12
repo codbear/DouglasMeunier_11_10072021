@@ -2,14 +2,14 @@ import React from 'react';
 
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import './Layout.css';
+import './Layout.scss';
 
 class Layout extends React.Component {
   render() {
     return (
-      <div className="root">
+      <div className="Layout">
         <Header />
-        <main className="content">{this.props.children}</main>
+        <main className="Layout_children">{this.props.children}</main>
         <Footer />
       </div>
     );
