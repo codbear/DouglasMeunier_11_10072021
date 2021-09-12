@@ -1,0 +1,82 @@
+@import '../../../theme/palette';
+@import '../../../theme/breakpoints';
+
+.Accordion {
+  margin-bottom: 33px;
+
+  &_summary {
+    background-color: $_color_background_primary;
+    border-radius: 5px;
+    position: relative;
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+
+    @media (break-up(md)) {
+      padding: 8px 33px 8px 18px;
+    }
+
+    p {
+      color: $_color_text_contrasted;
+
+      @media (break-up(md)) {
+        font-size: 24px;
+      }
+    }
+  }
+
+  &_expandIcon {
+    position: relative;
+    width: 28px;
+    top: 7px;
+    display: block;
+    height: 28px;
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    &::before,
+    &::after {
+      position: absolute;
+      display: block;
+      content: '';
+      border: 14px solid transparent;
+    }
+
+    &::before {
+      top: 0;
+      border-top-color: $_color_text_contrasted;
+    }
+
+    &::after {
+      top: -5px;
+      border-top-color: $_color_background_primary;
+    }
+
+    &.isOpen {
+      top: -7px;
+      transform: rotate(180deg);
+    }
+  }
+
+  &_details {
+    background-color: $_color_background_alternative;
+    border-radius: 5px;
+    position: relative;
+    top: -5px;
+    z-index: 9;
+    height: 0;
+    overflow: hidden;
+
+    p {
+      @media (break-up(md)) {
+        margin: 32px 33px 19px 18px;
+      }
+    }
+
+    &.isOpen {
+      height: unset;
+    }
+  }
+}
