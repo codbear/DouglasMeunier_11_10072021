@@ -65,21 +65,23 @@ class Slider extends React.Component {
       <div className="Slider" onKeyUp={this.handleKeyUp} tabIndex={0}>
         <div className="Slider_wrapper">
           <img src={imagesUrl[this.state.imageIndex]} alt="" />
-          <div className="Slider_navigation">
-            <img
-              src={ChevronLeft}
-              alt="Image précédente"
-              onClick={this.handlePrevious}
-              className="Slider_navigation_previous"
-            />
-            <div className="Slider_navigation_position">{`${currentPosition}/${totalImages}`}</div>
-            <img
-              src={ChevronRight}
-              alt="Image suivante"
-              onClick={this.handleNext}
-              className="Slider_navigation_next"
-            />
-          </div>
+          {totalImages > 1 && (
+            <div className="Slider_navigation">
+              <img
+                src={ChevronLeft}
+                alt="Image précédente"
+                onClick={this.handlePrevious}
+                className="Slider_navigation_previous"
+              />
+              <div className="Slider_navigation_position">{`${currentPosition}/${totalImages}`}</div>
+              <img
+                src={ChevronRight}
+                alt="Image suivante"
+                onClick={this.handleNext}
+                className="Slider_navigation_next"
+              />
+            </div>
+          )}
         </div>
       </div>
     );
