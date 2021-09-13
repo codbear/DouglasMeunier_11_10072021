@@ -19,6 +19,7 @@ class Slider extends React.Component {
 
     this.handlePrevious = this.handlePrevious.bind(this);
     this.handleNext = this.handleNext.bind(this);
+    this.handleKeyUp = this.handleKeyUp.bind(this);
   }
 
   goToImage(newIndex) {
@@ -61,7 +62,7 @@ class Slider extends React.Component {
     const totalImages = imagesUrl.length;
 
     return (
-      <div className="Slider">
+      <div className="Slider" onKeyUp={this.handleKeyUp} tabIndex={0}>
         <div className="Slider_wrapper">
           <img src={imagesUrl[this.state.imageIndex]} alt="" />
           <div className="Slider_navigation">
