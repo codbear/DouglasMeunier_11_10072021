@@ -1,0 +1,60 @@
+@import '../../../theme/palette';
+@import '../../../theme/breakpoints';
+
+.Slider {
+  height: 255px;
+
+  @media (break-up(md)) {
+    height: 415px;
+  }
+
+  &_wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+
+    @media (break-up(md)) {
+      border-radius: 25px;
+    }
+
+    > img {
+      object-fit: cover;
+      object-position: center;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &_navigation {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 6px;
+
+    @media (break-up(md)) {
+      padding: 25px 23px;
+    }
+
+    &_previous,
+    &_next {
+      cursor: pointer;
+      width: 12px;
+      height: 20px;
+
+      @media (break-up(md)) {
+        width: unset;
+        height: unset;
+      }
+    }
+
+    &_position {
+      color: $_color_text_contrasted;
+      font-size: 18px;
+      align-self: flex-end;
+    }
+  }
+}
