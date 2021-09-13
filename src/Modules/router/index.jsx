@@ -15,7 +15,7 @@ export const ROUTES = {
 };
 
 const Router = () => (
-  <BrowserRouter>
+  <BrowserRouter basename={process.env.PUBLIC_URL}>
     <Switch>
       <Route exact path={ROUTES.INDEX}>
         <Home />
