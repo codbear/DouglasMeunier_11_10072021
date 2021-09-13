@@ -4,6 +4,7 @@ import { Layout } from '../../layout';
 import { Accordion } from '../../accordion';
 import HeroBackground from '../images/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png';
 import './AboutScreen.scss';
+import { Hero } from '../../hero';
 
 const accordions = [
   {
@@ -32,20 +33,17 @@ class AboutScreen extends React.Component {
   render() {
     return (
       <Layout>
-        <div className="About_hero">
-          <div className="About_hero_wrapper">
-            <img src={HeroBackground} alt="" />
-            <div className="About_hero_overlay"></div>
+        <div className="About">
+          <Hero background={HeroBackground} />
+          <div className="About_accordionsWrapper">
+            {accordions.map((accordion) => (
+              <Accordion
+                key={accordion.summary}
+                summary={accordion.summary}
+                details={accordion.details}
+              />
+            ))}
           </div>
-        </div>
-        <div className="About_accordionsWrapper">
-          {accordions.map((accordion) => (
-            <Accordion
-              key={accordion.summary}
-              summary={accordion.summary}
-              details={accordion.details}
-            />
-          ))}
         </div>
       </Layout>
     );

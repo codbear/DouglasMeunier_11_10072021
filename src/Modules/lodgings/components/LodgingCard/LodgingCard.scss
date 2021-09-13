@@ -1,0 +1,30 @@
+@import '../../../theme/palette';
+@import '../../../theme/breakpoints';
+
+.LodgingCard {
+  position: relative;
+  background: $_color_background_primary
+    linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+  border-radius: 10px;
+  width: 100%;
+  height: 255px;
+  overflow: hidden;
+
+  @media (break-up(md)) {
+    height: 340px;
+  }
+
+  img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+  }
+
+  &_title {
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    color: $_color_text_contrasted;
+  }
+}
