@@ -32,7 +32,12 @@ class AboutScreen extends React.Component {
   render() {
     return (
       <Layout>
-        <img src={HeroBackground} alt="" className="About_hero" />
+        <div className="About_hero">
+          <div className="About_hero_wrapper">
+            <img src={HeroBackground} alt="" />
+            <div className="About_hero_overlay"></div>
+          </div>
+        </div>
         <div className="About_accordionsWrapper">
           {accordions.map((accordion) => (
             <Accordion
