@@ -87,10 +87,11 @@
     position: relative;
     top: -5px;
     z-index: 9;
-    height: 0;
     overflow: hidden;
+    visibility: collapse;
 
-    p {
+    p,
+    ul {
       margin: 23px 6px 53px 12px;
 
       @media (break-up(md)) {
@@ -98,8 +99,13 @@
       }
     }
 
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
     &.isOpen {
-      height: 100%;
+      visibility: unset;
     }
   }
 }
