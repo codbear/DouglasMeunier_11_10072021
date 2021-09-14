@@ -88,7 +88,7 @@
     top: -5px;
     z-index: 9;
     overflow: hidden;
-    visibility: collapse;
+    height: 0;
 
     p,
     ul {
@@ -105,7 +105,7 @@
     }
 
     &.isOpen {
-      visibility: unset;
+      height: 100%;
     }
   }
 }
