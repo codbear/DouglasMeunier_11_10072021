@@ -77,8 +77,10 @@ class LodgingScreen extends React.Component {
                   <h2 className="Lodging_title">{lodgingData.title}</h2>
                   <p className="Lodging-location">{lodgingData.location}</p>
                   <div className="Lodging_tagsCloud">
-                    {lodgingData.tags.map((tag) => (
-                      <div className="Lodging_tag">{tag}</div>
+                    {lodgingData.tags.map((tag, index) => (
+                      <div key={index} className="Lodging_tag">
+                        {tag}
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -89,8 +91,8 @@ class LodgingScreen extends React.Component {
                     <img src={lodgingData.host.picture} alt="" className="Lodging_host_picture" />
                   </div>
                   <div className="Lodging_rating">
-                    {ratingStars.map((Star) => (
-                      <img src={Star} alt="" className="Lodging_rating_star" />
+                    {ratingStars.map((Star, index) => (
+                      <img key={index} src={Star} alt="" className="Lodging_rating_star" />
                     ))}
                   </div>
                 </div>
@@ -122,7 +124,7 @@ class LodgingScreenContainer extends React.Component {
   render() {
     const { id: lodgingId } = this.props.match.params;
 
-    return <WithLodgingsData lodgindId={lodgingId} />;
+    return <WithLodgingsData lodgingId={lodgingId} />;
   }
 }
 
