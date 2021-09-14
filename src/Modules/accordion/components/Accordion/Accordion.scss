@@ -87,15 +87,21 @@
     position: relative;
     top: -5px;
     z-index: 9;
-    height: 0;
     overflow: hidden;
+    height: 0;
 
-    p {
+    p,
+    ul {
       margin: 23px 6px 53px 12px;
 
       @media (break-up(md)) {
         margin: 33px 19px;
       }
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
     }
 
     &.isOpen {

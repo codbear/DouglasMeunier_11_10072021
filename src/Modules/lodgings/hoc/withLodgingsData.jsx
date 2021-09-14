@@ -1,10 +1,21 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-export default function withLodgingsData(WrappedComponent) {
+const LODGINGS_URL = process.env.PUBLIC_URL + '/data/lodgingsData.json';
+
+const withLodgingsData = (WrappedComponent) => {
   class WithLodgingsData extends React.Component {
     static displayName = `WithLodgingsData(${
       WrappedComponent.displayName || WrappedComponent.name
     })`;
+
+    static propTypes = {
+      lodgingId: PropTypes.string,
+    };
+
+    static defaultProps = {
+      lodgingId: null,
+    };
 
     constructor(props) {
       super(props);
@@ -14,11 +25,17 @@ export default function withLodgingsData(WrappedComponent) {
       };
     }
 
-    componentDidMount() {
+    async componentDidMount() {
       if (!this.state.lodgingsData) {
-        fetch('data/lodgingsData.json').then((response) => {
-          response.json().then((lodgingsData) => this.setState({ lodgingsData }));
-        });
+        const response = await fetch(LODGINGS_URL);
+        const parsedResponse = await response.json();
+        const { lodgingId } = this.props;
+
+        const lodgingsData = lodgingId
+          ? parsedResponse.filter((lodging) => lodging.id === lodgingId)
+          : parsedResponse;
+
+        this.setState({ lodgingsData });
       }
     }
 
@@ -28,4 +45,6 @@ export default function withLodgingsData(WrappedComponent) {
   }
 
   return WithLodgingsData;
-}
+};
+
+export default withLodgingsData;

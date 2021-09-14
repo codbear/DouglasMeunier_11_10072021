@@ -6,7 +6,8 @@ import './Accordion.scss';
 class Accordion extends React.Component {
   static propTypes = {
     summary: PropTypes.string.isRequired,
-    details: PropTypes.string.isRequired,
+    details: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)])
+      .isRequired,
   };
 
   constructor(props) {
@@ -27,6 +28,7 @@ class Accordion extends React.Component {
 
   render() {
     const { summary, details } = this.props;
+    const isDetailsAnArray = Array.isArray(details);
 
     return (
       <div className="Accordion">
@@ -38,7 +40,15 @@ class Accordion extends React.Component {
           ></span>
         </div>
         <div className={this.getIsOpenClassName() + 'Accordion_details'}>
-          <p>{details}</p>
+          {isDetailsAnArray ? (
+            <ul>
+              {details.map((detail, index) => (
+                <li key={index}>{detail}</li>
+              ))}
+            </ul>
+          ) : (
+            <p>{details}</p>
+          )}
         </div>
       </div>
     );

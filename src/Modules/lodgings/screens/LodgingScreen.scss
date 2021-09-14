@@ -1,0 +1,154 @@
+@import '../../theme/palette';
+@import '../../theme/breakpoints';
+
+.Lodging {
+  display: flex;
+  flex-direction: column;
+
+  .Slider {
+    margin-bottom: 30px;
+  }
+
+  &_loader {
+    margin: 50px auto;
+    width: 10%;
+    height: auto;
+  }
+
+  &_grid {
+    &_meta {
+      grid-area: meta;
+    }
+
+    &_host {
+      grid-area: host;
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      margin: 16px 0;
+
+      @media (break-up(md)) {
+        flex-direction: column;
+        align-items: flex-end;
+      }
+    }
+
+    &_accordions {
+      grid-area: accordions;
+      display: grid;
+      grid-template-columns: 1fr;
+
+      .Accordion {
+        margin-bottom: 20px;
+      }
+
+      @media (break-up(md)) {
+        grid-template-columns: 1fr 1fr;
+        column-gap: 76px;
+        margin-top: 24px;
+      }
+    }
+
+    display: flex;
+    flex-direction: column;
+
+    @media (break-up(md)) {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas:
+        'meta meta meta host'
+        'accordions accordions accordions accordions';
+    }
+  }
+
+  &_title {
+    margin: 0 {
+      bottom: 5px;
+    }
+    font-size: 18px;
+
+    @media (break-up(md)) {
+      font-size: 36px;
+      margin-bottom: 0;
+    }
+  }
+
+  &_location {
+    font-size: 14px;
+
+    @media (break-up(md)) {
+      font-size: 18px;
+    }
+  }
+
+  &_tagsCloud {
+    display: flex;
+    margin-top: 10px;
+
+    @media (break-up(md)) {
+      margin-top: 20px;
+    }
+  }
+
+  &_tag {
+    background-color: $_color_background_primary;
+    color: $_color_text_contrasted;
+    border-radius: 10px;
+    height: 25px;
+    font-size: 10px;
+    margin-right: 10px;
+    padding: 2px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    @media (break-up(md)) {
+      font-size: 14px;
+    }
+  }
+
+  &_host {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    &_name {
+      margin-right: 10px;
+      font-size: 12px;
+      width: 50%;
+      text-align: right;
+
+      @media (break-up(md)) {
+        font-size: 18px;
+      }
+    }
+
+    &_picture {
+      border-radius: 50%;
+      width: 32px;
+      height: 32px;
+
+      @media (break-up(md)) {
+        width: 64px;
+        height: 64px;
+      }
+    }
+  }
+
+  &_rating {
+    @media (break-up(md)) {
+      margin-top: 24px;
+    }
+
+    &_star {
+      width: 15px;
+      height: 15px;
+
+      @media (break-up(md)) {
+        width: 30px;
+        height: 30px;
+      }
+    }
+  }
+}
