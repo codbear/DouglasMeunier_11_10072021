@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const LODGINGS_URL = process.env.PUBLIC_URL + '/data/lodgingsData.json';
 
@@ -7,6 +8,14 @@ const withLodgingsData = (WrappedComponent) => {
     static displayName = `WithLodgingsData(${
       WrappedComponent.displayName || WrappedComponent.name
     })`;
+
+    static propTypes = {
+      lodgingId: PropTypes.string,
+    };
+
+    static defaultProps = {
+      lodgingId: null,
+    };
 
     constructor(props) {
       super(props);
@@ -20,7 +29,7 @@ const withLodgingsData = (WrappedComponent) => {
       if (!this.state.lodgingsData) {
         const response = await fetch(LODGINGS_URL);
         const parsedResponse = await response.json();
-        const { id: lodgingId } = this.props.match.params;
+        const { lodgingId } = this.props;
 
         const lodgingsData = lodgingId
           ? parsedResponse.filter((lodging) => lodging.id === lodgingId)
