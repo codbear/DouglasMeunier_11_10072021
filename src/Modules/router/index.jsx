@@ -14,30 +14,34 @@ export const ROUTES = {
   },
 };
 
-const Router = () => (
-  <BrowserRouter basename={process.env.PUBLIC_URL}>
-    <Switch>
-      <Route exact path={ROUTES.INDEX}>
-        <Home />
-      </Route>
+class Router extends React.Component {
+  render() {
+    return (
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
+        <Switch>
+          <Route exact path={ROUTES.INDEX}>
+            <Home />
+          </Route>
 
-      <Route exact path={ROUTES.SINGLE}>
-        <Lodging />
-      </Route>
+          <Route exact path={ROUTES.SINGLE}>
+            <Lodging />
+          </Route>
 
-      <Route exact path={ROUTES.ABOUT}>
-        <About />
-      </Route>
+          <Route exact path={ROUTES.ABOUT}>
+            <About />
+          </Route>
 
-      <Route exact path={ROUTES.ERROR.NOT_FOUND}>
-        <NotFound />
-      </Route>
+          <Route exact path={ROUTES.ERROR.NOT_FOUND}>
+            <NotFound />
+          </Route>
 
-      <Route path="*">
-        <Redirect to={ROUTES.ERROR.NOT_FOUND} />
-      </Route>
-    </Switch>
-  </BrowserRouter>
-);
+          <Route path="*">
+            <Redirect to={ROUTES.ERROR.NOT_FOUND} />
+          </Route>
+        </Switch>
+      </BrowserRouter>
+    );
+  }
+}
 
 export default Router;

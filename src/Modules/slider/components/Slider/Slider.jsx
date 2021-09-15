@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import ChevronLeft from '../../images/ChevronLeft.svg';
 import ChevronRight from '../../images/ChevronRight.svg';
 import './Slider.scss';
+import { IconButton } from '../../../ui';
 
 class Slider extends React.Component {
   static propTypes = {
@@ -67,17 +68,17 @@ class Slider extends React.Component {
           <img src={imagesUrl[this.state.imageIndex]} alt="" />
           {totalImages > 1 && (
             <div className="Slider_navigation">
-              <img
-                src={ChevronLeft}
-                alt="Image précédente"
+              <IconButton
+                icon={ChevronLeft}
                 onClick={this.handlePrevious}
+                aria-label="Image précédente"
                 className="Slider_navigation_previous"
               />
               <div className="Slider_navigation_position">{`${currentPosition}/${totalImages}`}</div>
-              <img
-                src={ChevronRight}
-                alt="Image suivante"
+              <IconButton
+                icon={ChevronRight}
                 onClick={this.handleNext}
+                aria-label="Image suivante"
                 className="Slider_navigation_next"
               />
             </div>
