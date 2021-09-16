@@ -1,10 +1,9 @@
 import React from 'react';
 
 import { Layout } from '../../layout';
-import { Accordion } from '../../accordion';
+import { Accordion, Hero } from '../../ui';
 import HeroBackground from '../images/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png';
 import './AboutScreen.scss';
-import { Hero } from '../../hero';
 
 const accordions = [
   {

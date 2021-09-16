@@ -3,8 +3,7 @@ import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { Layout } from '../../layout';
-import { Slider } from '../../slider';
-import { Accordion } from '../../accordion';
+import { Slider, Accordion } from '../../ui';
 import withLodgingsData from '../hoc/withLodgingsData';
 import Loader from '../images/Loader.svg';
 import StarFull from '../images/StarFull.svg';

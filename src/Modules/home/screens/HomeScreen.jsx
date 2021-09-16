@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Layout } from '../../layout';
-import { Hero } from '../../hero';
+import { Hero } from '../../ui';
 import { LodgingCard, withLodgingsData } from '../../lodgings';
 import HeroBackground from '../images/hero-background.png';
 import './HomeScreen.scss';

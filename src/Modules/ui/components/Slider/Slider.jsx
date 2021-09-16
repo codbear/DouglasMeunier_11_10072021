@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ChevronLeft from '../../images/ChevronLeft.svg';
-import ChevronRight from '../../images/ChevronRight.svg';
+import ChevronLeft from '../../vectors/ChevronLeft.svg';
+import ChevronRight from '../../vectors/ChevronRight.svg';
+import IconButton from '../IconButton/IconButton';
 import './Slider.scss';
-import { IconButton } from '../../../ui';
 
 class Slider extends React.Component {
   static propTypes = {
