@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Layout } from '../../layout';
 import { Accordion, Hero } from '../../ui';
-import HeroBackground from '../images/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png';
+import HeroBackground from '../images/HeroBackground.png';
 import './AboutScreen.scss';
 
 const accordions = [
