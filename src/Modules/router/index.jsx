@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
+import { HashRouter, Redirect, Route, Switch } from 'react-router-dom';
 import { Home } from '../home';
 import { Lodging } from '../lodgings';
 import { About } from '../about';
@@ -17,7 +17,7 @@ export const ROUTES = {
 class Router extends React.Component {
   render() {
     return (
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      <HashRouter>
         <Switch>
           <Route exact path={ROUTES.INDEX}>
             <Home />
@@ -39,7 +39,7 @@ class Router extends React.Component {
             <Redirect to={ROUTES.ERROR.NOT_FOUND} />
           </Route>
         </Switch>
-      </BrowserRouter>
+      </HashRouter>
     );
   }
 }
