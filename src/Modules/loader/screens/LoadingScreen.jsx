@@ -9,7 +9,7 @@ class LoadingScreen extends React.Component {
     return (
       <Layout>
         <div className="Loading">
-          <img src={Loader} alt="" className="Lodging_loader" />
+          <img src={Loader} alt="" className="Loading_loader" />
         </div>
       </Layout>
     );
