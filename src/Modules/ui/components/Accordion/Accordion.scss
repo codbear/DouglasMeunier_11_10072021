@@ -11,6 +11,7 @@
     z-index: 10;
     display: flex;
     justify-content: space-between;
+    width: 100%;
     padding: 6px {
       left: 12px;
     }
@@ -26,9 +27,11 @@
       }
     }
 
-    p {
+    &_title {
+      margin: 0;
       color: $_color_text_contrasted;
       font-size: 13px;
+      font-weight: normal;
 
       @media (break-up(md)) {
         font-size: 24px;

@@ -97,8 +97,18 @@ class LodgingScreen extends React.Component {
                 </div>
 
                 <div className="Lodging_grid_accordions">
-                  <Accordion summary="Description" details={lodgingData.description} />
-                  <Accordion summary="Equipements" details={lodgingData.equipments} />
+                  <Accordion
+                    summary="Description"
+                    details={lodgingData.description}
+                    uniqueId="Description"
+                    TitleComponent="h3"
+                  />
+                  <Accordion
+                    summary="Equipements"
+                    details={lodgingData.equipments}
+                    uniqueId="Equipments"
+                    TitleComponent="h3"
+                  />
                 </div>
               </div>
             </>

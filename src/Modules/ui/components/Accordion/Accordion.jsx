@@ -4,13 +4,18 @@ import PropTypes from 'prop-types';
 import ChevronTop from '../../vectors/ChevronTop.svg';
 import ChevronBottom from '../../vectors/ChevronBottom.svg';
 import './Accordion.scss';
-import IconButton from '../IconButton/IconButton';
 
 class Accordion extends React.Component {
   static propTypes = {
     summary: PropTypes.string.isRequired,
     details: PropTypes.oneOfType([PropTypes.string, PropTypes.arrayOf(PropTypes.string)])
       .isRequired,
+    uniqueId: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+    TitleComponent: PropTypes.string,
+  };
+
+  static defaultProps = {
+    TitleComponent: 'p',
   };
 
   constructor(props) {
@@ -26,16 +31,31 @@ class Accordion extends React.Component {
   }
 
   render() {
-    const { summary, details } = this.props;
+    const { summary, details, uniqueId, TitleComponent } = this.props;
     const isDetailsAnArray = Array.isArray(details);
 
     return (
       <div className="Accordion">
-        <div className="Accordion_summary" onClick={this.onClick}>
-          <p>{summary}</p>
-          <IconButton icon={this.state.isOpen ? ChevronTop : ChevronBottom} />
-        </div>
-        <div className={`Accordion_details${this.state.isOpen ? ' isOpen' : ''}`}>
+        <button
+          className="Accordion_summary"
+          onClick={this.onClick}
+          aria-expanded={this.state.isOpen}
+          aria-controls={`accordionDetails${uniqueId}`}
+          id={`accordionSummary${uniqueId}`}
+        >
+          <TitleComponent className="Accordion_summary_title">{summary}</TitleComponent>
+          <img
+            src={this.state.isOpen ? ChevronTop : ChevronBottom}
+            alt=""
+            className="Accordion_summary_icon"
+          />
+        </button>
+        <div
+          className={`Accordion_details${this.state.isOpen ? ' isOpen' : ''}`}
+          role="region"
+          id={`accordionDetails${uniqueId}`}
+          aria-labelledby={`accordionSummary${uniqueId}`}
+        >
           {isDetailsAnArray ? (
             <ul>
               {details.map((detail, index) => (

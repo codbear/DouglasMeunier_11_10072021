@@ -35,11 +35,13 @@ class AboutScreen extends React.Component {
         <div className="About">
           <Hero background={HeroBackground} />
           <div className="About_accordionsWrapper">
-            {accordions.map((accordion) => (
+            {accordions.map((accordion, id) => (
               <Accordion
                 key={accordion.summary}
                 summary={accordion.summary}
                 details={accordion.details}
+                uniqueId={id}
+                TitleComponent="h2"
               />
             ))}
           </div>
