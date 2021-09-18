@@ -24,7 +24,9 @@ class LodgingCard extends React.Component {
       <Link to={lodgingPath}>
         <div className="LodgingCard">
           {cover && <img src={cover} alt="" />}
-          <h2 className="LodgingCard_title">{title}</h2>
+          <div className="LodgingCard_overlay">
+            <h2 className="LodgingCard_title">{title}</h2>
+          </div>
         </div>
       </Link>
     );
