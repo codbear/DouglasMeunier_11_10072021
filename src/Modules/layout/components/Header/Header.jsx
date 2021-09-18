@@ -24,7 +24,7 @@ class Header extends React.Component {
   render() {
     return (
       <header className="Header">
-        <img src={Logo} alt="" className="Header_logo" />
+        <h1 className="Header_logo">Kasa</h1>
         <nav>
           <ul className="Header_mainNav">
             <li className={'Header_navItem ' + this.getIsActive(ROUTES.INDEX)}>

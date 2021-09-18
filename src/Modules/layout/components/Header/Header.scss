@@ -12,9 +12,20 @@
 
   &_logo {
     width: 145px;
+    height: 47px;
+    margin: 0;
+    background: transparent url("../../images/logoKasa.svg") no-repeat;
+    background-size: contain;
+    text-indent: -30000px;
 
     @media (break-up(md)) {
       width: 210px;
+    height: 68px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
     }
   }
 
