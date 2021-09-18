@@ -53,11 +53,12 @@ class LodgingScreen extends React.Component {
       return <LoadingScreen />;
     }
 
-    if (!lodgingsData) {
+    const lodgingData = lodgingsData[0];
+
+    if (!lodgingData) {
       return <Redirect to={ROUTES.ERROR.NOT_FOUND} />;
     }
 
-    const lodgingData = lodgingsData[0];
     const ratingStars = ratingMap[lodgingData.rating];
 
     return (
