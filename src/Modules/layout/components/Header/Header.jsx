@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import { Link, withRouter } from 'react-router-dom';
 
 import { ROUTES } from '../../../router';
-import Logo from '../../images/logoKasa.svg';
 import './Header.scss';
 
 class Header extends React.Component {
