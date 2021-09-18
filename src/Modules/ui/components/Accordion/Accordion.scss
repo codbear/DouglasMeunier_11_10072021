@@ -15,6 +15,10 @@
       left: 12px;
     }
 
+    &:hover {
+      cursor: pointer;
+    }
+
     @media (break-up(md)) {
       padding: 8px {
         left: 19px;
@@ -28,55 +32,6 @@
 
       @media (break-up(md)) {
         font-size: 24px;
-      }
-    }
-  }
-
-  &_expandIcon {
-    position: relative;
-    top: 5px;
-    width: 20px;
-    height: 20px;
-    display: block;
-
-    @media (break-up(md)) {
-      top: 10px;
-      height: 30px;
-      width: 30px;
-    }
-
-    &:hover {
-      cursor: pointer;
-    }
-
-    &::before,
-    &::after {
-      position: absolute;
-      display: block;
-      content: '';
-      border: 10px solid transparent;
-
-      @media (break-up(md)) {
-        border-width: 15px;
-      }
-    }
-
-    &::before {
-      top: 0;
-      border-top-color: $_color_text_contrasted;
-    }
-
-    &::after {
-      top: -4px;
-      border-top-color: $_color_background_primary;
-    }
-
-    &.isOpen {
-      top: -5px;
-      transform: rotate(180deg);
-
-      @media (break-up(md)) {
-        top: -10px;
       }
     }
   }

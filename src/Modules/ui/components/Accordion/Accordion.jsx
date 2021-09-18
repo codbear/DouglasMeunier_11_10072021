@@ -1,7 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
+import ChevronTop from '../../vectors/ChevronTop.svg';
+import ChevronBottom from '../../vectors/ChevronBottom.svg';
 import './Accordion.scss';
+import IconButton from '../IconButton/IconButton';
 
 class Accordion extends React.Component {
   static propTypes = {
@@ -22,24 +25,17 @@ class Accordion extends React.Component {
     });
   }
 
-  getIsOpenClassName() {
-    return this.state.isOpen ? 'isOpen ' : '';
-  }
-
   render() {
     const { summary, details } = this.props;
     const isDetailsAnArray = Array.isArray(details);
 
     return (
       <div className="Accordion">
-        <div className="Accordion_summary">
+        <div className="Accordion_summary" onClick={this.onClick}>
           <p>{summary}</p>
-          <span
-            className={this.getIsOpenClassName() + 'Accordion_expandIcon'}
-            onClick={this.onClick}
-          ></span>
+          <IconButton icon={this.state.isOpen ? ChevronTop : ChevronBottom} />
         </div>
-        <div className={this.getIsOpenClassName() + 'Accordion_details'}>
+        <div className={`Accordion_details${this.state.isOpen ? ' isOpen' : ''}`}>
           {isDetailsAnArray ? (
             <ul>
               {details.map((detail, index) => (
