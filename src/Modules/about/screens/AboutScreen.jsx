@@ -1,10 +1,9 @@
 import React from 'react';
 
 import { Layout } from '../../layout';
-import { Accordion } from '../../accordion';
-import HeroBackground from '../images/kalen-emsley-Bkci_8qcdvQ-unsplash 2.png';
+import { Accordion, Hero } from '../../ui';
+import HeroBackground from '../images/HeroBackground.png';
 import './AboutScreen.scss';
-import { Hero } from '../../hero';
 
 const accordions = [
   {
@@ -36,11 +35,13 @@ class AboutScreen extends React.Component {
         <div className="About">
           <Hero background={HeroBackground} />
           <div className="About_accordionsWrapper">
-            {accordions.map((accordion) => (
+            {accordions.map((accordion, id) => (
               <Accordion
                 key={accordion.summary}
                 summary={accordion.summary}
                 details={accordion.details}
+                uniqueId={id}
+                TitleComponent="h2"
               />
             ))}
           </div>

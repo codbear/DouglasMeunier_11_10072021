@@ -22,6 +22,7 @@ const withLodgingsData = (WrappedComponent) => {
 
       this.state = {
         lodgingsData: null,
+        isLoading: true,
       };
     }
 
@@ -35,12 +36,14 @@ const withLodgingsData = (WrappedComponent) => {
           ? parsedResponse.filter((lodging) => lodging.id === lodgingId)
           : parsedResponse;
 
-        this.setState({ lodgingsData });
+        this.setState({ lodgingsData, isLoading: false });
       }
     }
 
     render() {
-      return <WrappedComponent lodgingsData={this.state.lodgingsData} />;
+      return (
+        <WrappedComponent lodgingsData={this.state.lodgingsData} isLoading={this.state.isLoading} />
+      );
     }
   }
 

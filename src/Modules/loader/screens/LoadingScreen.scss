@@ -1,0 +1,10 @@
+.Loading {
+  display: flex;
+  flex-direction: column;
+
+  &_loader {
+    margin: 50px auto;
+    width: 10%;
+    height: auto;
+  }
+}
