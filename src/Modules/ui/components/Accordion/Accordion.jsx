@@ -21,13 +21,12 @@ class Accordion extends React.Component {
   constructor(props) {
     super(props);
     this.state = { isOpen: false };
-    this.onClick = this.onClick.bind(this);
   }
 
-  onClick() {
-    this.setState({
-      isOpen: !this.state.isOpen,
-    });
+  handleClick() {
+    this.setState((state) => ({
+      isOpen: !state.isOpen,
+    }));
   }
 
   render() {
@@ -38,7 +37,7 @@ class Accordion extends React.Component {
       <div className="Accordion">
         <button
           className="Accordion_summary"
-          onClick={this.onClick}
+          onClick={() => this.handleClick()}
           aria-expanded={this.state.isOpen}
           aria-controls={`accordionDetails${uniqueId}`}
           id={`accordionSummary${uniqueId}`}
